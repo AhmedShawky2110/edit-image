@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: rgb(63, 63, 63);
+  padding: 20px;
+}
+
+.title {
+  padding: 40px 20px;
+  text-align: center;
+  color: rgb(196, 196, 196);
+}
+
+.container {
+  background-color: rgb(44, 44, 44);
+  height: auto;
+  width: 90vw;
+  margin: auto;
+  border-radius: 10px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+}
+.container .image {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.container .image .img-box canvas {
+  max-width: 45vw;
+  max-height: 60vh;
+}
+.container .image .upload-box input {
+  display: none;
+}
+.container .image .upload-box label {
+  cursor: pointer;
+  color: white;
+  padding: 10px 20px;
+  border: 2px dashed #EEE;
+}
+.container .filters ul, .container .filters ul li {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.container .filters ul li label, .container .filters ul li li label {
+  color: white;
+}
+.container .filters ul li:last-child, .container .filters ul li li:last-child {
+  flex-direction: row;
+  justify-content: center;
+}
+.container .filters ul li:last-child a, .container .filters ul li:last-child span, .container .filters ul li li:last-child a, .container .filters ul li li:last-child span {
+  cursor: pointer;
+  color: white;
+  padding: 10px 20px;
+  background-color: #070;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .container .image .img-box img, .container .image .img-box canvas {
+    max-width: 70vw;
+  }
+}/*# sourceMappingURL=style.css.map */
